@@ -31,9 +31,47 @@
 
           <section>
             <h2>문의</h2>
-            <p>지원 요청, 버그 제보, 기능 제안은 공개 GitHub Issues 페이지를 이용해 주세요.</p>
-            <p><a href="https://github.com/gimbae/vamo-support/issues">github.com/gimbae/vamo-support/issues</a></p>
-            <p class="contact-note">이메일 문의가 필요한 경우: gimbae [at] icloud [dot] com</p>
+            <p>지원 요청, 버그 제보, 기능 제안을 보내주세요. 답장이 필요한 경우 이메일로 회신하겠습니다.</p>
+            <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+              <input type="hidden" name="access_key" value="acc9166d-5614-4191-8ba9-2f325bc318d2">
+              <input type="hidden" name="from_name" value="Vamo Support">
+              <input type="hidden" name="subject" value="New Vamo support request">
+              <input type="hidden" name="redirect" value="https://vamo-support.pages.dev/ko/thanks/">
+              <input class="hidden-field" type="checkbox" name="botcheck" tabindex="-1" autocomplete="off">
+
+              <div class="form-grid">
+                <div class="field">
+                  <label for="ko-name">이름</label>
+                  <input id="ko-name" type="text" name="name" autocomplete="name" required>
+                </div>
+                <div class="field">
+                  <label for="ko-email">이메일</label>
+                  <input id="ko-email" type="email" name="email" autocomplete="email" required>
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="ko-topic">문의 유형</label>
+                <select id="ko-topic" name="topic" required>
+                  <option value="">문의 유형을 선택해 주세요</option>
+                  <option>버그 제보</option>
+                  <option>Apple Watch 동기화</option>
+                  <option>음성 안내</option>
+                  <option>기능 제안</option>
+                  <option>기타</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="ko-message">내용</label>
+                <textarea id="ko-message" name="message" placeholder="어떤 기기에서 어떤 문제가 있었는지, 기대한 동작과 함께 알려주세요." required></textarea>
+              </div>
+
+              <div class="submit-row">
+                <button class="button" type="submit">문의 보내기</button>
+                <p class="contact-note">공개 버그 제보는 <a href="https://github.com/gimbae/vamo-support/issues">GitHub Issues</a>도 사용할 수 있습니다.</p>
+              </div>
+            </form>
           </section>
 
           <section>

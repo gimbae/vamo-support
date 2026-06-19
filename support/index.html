@@ -31,9 +31,47 @@
 
           <section>
             <h2>Contact</h2>
-            <p>For support, bug reports, or feature requests, use the public GitHub Issues page:</p>
-            <p><a href="https://github.com/gimbae/vamo-support/issues">github.com/gimbae/vamo-support/issues</a></p>
-            <p class="contact-note">If you prefer email, contact: gimbae [at] icloud [dot] com</p>
+            <p>Send a support request, bug report, or feature idea. I will reply by email when a reply is needed.</p>
+            <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+              <input type="hidden" name="access_key" value="acc9166d-5614-4191-8ba9-2f325bc318d2">
+              <input type="hidden" name="from_name" value="Vamo Support">
+              <input type="hidden" name="subject" value="New Vamo support request">
+              <input type="hidden" name="redirect" value="https://vamo-support.pages.dev/thanks/">
+              <input class="hidden-field" type="checkbox" name="botcheck" tabindex="-1" autocomplete="off">
+
+              <div class="form-grid">
+                <div class="field">
+                  <label for="name">Name</label>
+                  <input id="name" type="text" name="name" autocomplete="name" required>
+                </div>
+                <div class="field">
+                  <label for="email">Email</label>
+                  <input id="email" type="email" name="email" autocomplete="email" required>
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="topic">Topic</label>
+                <select id="topic" name="topic" required>
+                  <option value="">Choose a topic</option>
+                  <option>Bug report</option>
+                  <option>Apple Watch sync</option>
+                  <option>Voice announcements</option>
+                  <option>Feature request</option>
+                  <option>Other</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Tell me what happened, which device you used, and what you expected." required></textarea>
+              </div>
+
+              <div class="submit-row">
+                <button class="button" type="submit">Send Message</button>
+                <p class="contact-note">You can also use <a href="https://github.com/gimbae/vamo-support/issues">GitHub Issues</a> for public bug reports.</p>
+              </div>
+            </form>
           </section>
 
           <section>
