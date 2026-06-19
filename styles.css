@@ -19,7 +19,7 @@ body {
   background: var(--cream);
   color: var(--text);
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", sans-serif;
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
 a {
@@ -42,7 +42,7 @@ a {
   justify-content: space-between;
   gap: 16px;
   align-items: center;
-  margin-bottom: 28px;
+  margin-bottom: 30px;
 }
 
 .brand {
@@ -65,32 +65,29 @@ a {
 
 .nav-links {
   display: flex;
-  gap: 12px;
+  gap: 8px;
   flex-wrap: wrap;
   justify-content: flex-end;
 }
 
-.language-links {
-  display: inline-flex;
-  gap: 8px;
-  align-items: center;
-  color: var(--muted);
-  font-size: 14px;
-  font-weight: 750;
-}
-
-.language-links a {
-  color: var(--green);
-  text-decoration: none;
-}
-
-.nav-links a {
+.nav-links a,
+.language-button {
   text-decoration: none;
   padding: 8px 12px;
   border: 1px solid var(--line);
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.45);
   font-size: 14px;
+}
+
+.nav-links a.language-button {
+  min-width: 54px;
+  padding: 6px 10px;
+  background: var(--green-deep);
+  color: white;
+  font-size: 12px;
+  font-weight: 850;
+  text-align: center;
 }
 
 .hero,
@@ -102,7 +99,7 @@ a {
 }
 
 .hero {
-  padding: clamp(28px, 5vw, 56px);
+  padding: clamp(30px, 5vw, 52px);
 }
 
 .kicker {
@@ -114,18 +111,18 @@ a {
 }
 
 h1 {
-  margin: 10px 0 14px;
+  margin: 12px 0 16px;
   color: var(--green-deep);
-  font-size: clamp(38px, 7vw, 72px);
-  line-height: 0.95;
-  letter-spacing: -0.04em;
+  font-size: clamp(34px, 5.6vw, 58px);
+  line-height: 1.04;
+  letter-spacing: -0.025em;
 }
 
 h2 {
-  margin: 0 0 10px;
+  margin: 0 0 12px;
   color: var(--green-deep);
-  font-size: 24px;
-  line-height: 1.15;
+  font-size: 23px;
+  line-height: 1.22;
 }
 
 p {
@@ -135,8 +132,9 @@ p {
 .lead {
   max-width: 680px;
   color: var(--muted);
-  font-size: 18px;
-  font-weight: 650;
+  font-size: clamp(17px, 2.5vw, 19px);
+  font-weight: 620;
+  line-height: 1.58;
 }
 
 .actions {
@@ -178,7 +176,11 @@ p {
 
 .content {
   display: grid;
-  gap: 16px;
+  gap: 24px;
+}
+
+.content section {
+  max-width: 720px;
 }
 
 .contact-note {
@@ -188,8 +190,8 @@ p {
 
 .contact-form {
   display: grid;
-  gap: 14px;
-  margin-top: 18px;
+  gap: 16px;
+  margin-top: 20px;
 }
 
 .form-grid {
@@ -205,7 +207,7 @@ p {
 
 .field label {
   color: var(--green-deep);
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 850;
 }
 
@@ -269,12 +271,28 @@ li + li {
 
 @media (max-width: 680px) {
   .nav {
-    align-items: flex-start;
-    flex-direction: column;
+    align-items: center;
+    flex-direction: row;
   }
 
   .nav-links {
-    justify-content: flex-start;
+    justify-content: flex-end;
+    gap: 6px;
+  }
+
+  .nav-links a {
+    padding: 7px 9px;
+    font-size: 13px;
+  }
+
+  .nav-links a.language-button {
+    padding: 6px 9px;
+    font-size: 12px;
+  }
+
+  h1 {
+    font-size: 31px;
+    line-height: 1.08;
   }
 
   .grid {

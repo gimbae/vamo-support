@@ -4,9 +4,9 @@ Need help with Vamo: Padel Score Buddy?
 
 ## Contact
 
-For support, bug reports, or feature requests, use the GitHub Issues page:
+For support, bug reports, or feature requests, use the support form:
 
-https://github.com/gimbae/vamo-support/issues
+https://vamo-support.pages.dev/support/
 
 ## Common Checks
 
@@ -17,4 +17,3 @@ https://github.com/gimbae/vamo-support/issues
 ## Privacy
 
 Vamo does not require an account and does not send match data to a server. Match history and share-card photos stay on your device unless you choose to share or save an image.
-

@@ -33,5 +33,6 @@ The app does not include third-party analytics, advertising, or tracking SDKs.
 
 ## Contact
 
-For privacy questions, contact the developer through the support contact listed on the App Store product page or the GitHub repository.
+For privacy questions, contact the developer through the support page:
 
+https://vamo-support.pages.dev/support/
